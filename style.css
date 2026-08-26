@@ -1,0 +1,373 @@
+:root {
+  --rose: #ff7eb3;
+  --gold: #ffd76a;
+  --ink: #5a2d58;
+  --cream: #fff7fb;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  height: 100%;
+  height: 100dvh;
+  overflow: hidden;
+  background: #1b0b24;
+  font-family: "Fredoka", "Segoe UI", sans-serif;
+  color: var(--ink);
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior: none;
+  position: fixed;
+  inset: 0;
+}
+
+#app {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #1b0b24;
+}
+
+#game {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #1b0b24;
+}
+
+#hud {
+  position: absolute;
+  inset: max(10px, env(safe-area-inset-top)) 12px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: wrap;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.hud-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 247, 251, 0.88);
+  border: 3px solid #fff;
+  border-radius: 999px;
+  padding: 6px 16px 6px 8px;
+  font-weight: 700;
+  font-size: 28px;
+  color: #a14a16;
+  box-shadow: 0 8px 20px rgba(90, 45, 88, 0.18);
+}
+
+.hud-left img {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+}
+
+.hud-gem {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 247, 251, 0.88);
+  border: 3px solid #fff;
+  border-radius: 999px;
+  padding: 4px 14px 4px 6px;
+  font-weight: 700;
+  font-size: 28px;
+  color: #1a8a78;
+  box-shadow: 0 8px 20px rgba(90, 45, 88, 0.18);
+  min-width: 64px;
+}
+
+.hud-gem img {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+}
+
+.hud-gem.empty {
+  filter: grayscale(1);
+  opacity: 0.45;
+}
+
+.hud-gem.hot {
+  filter: none;
+  opacity: 1;
+  box-shadow: 0 0 18px rgba(80, 230, 190, 0.8), 0 8px 20px rgba(90, 45, 88, 0.18);
+}
+
+.hud-hearts {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  background: rgba(255, 247, 251, 0.88);
+  border: 3px solid #fff;
+  border-radius: 999px;
+  padding: 4px 12px;
+  box-shadow: 0 8px 20px rgba(90, 45, 88, 0.18);
+}
+
+.hud-hearts img {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+}
+
+.hud-hearts img.empty {
+  filter: grayscale(1);
+  opacity: 0.28;
+}
+
+.hud-center {
+  background: rgba(255, 247, 251, 0.88);
+  border: 3px solid #fff;
+  border-radius: 999px;
+  padding: 8px 22px;
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--ink);
+  box-shadow: 0 8px 20px rgba(90, 45, 88, 0.18);
+}
+
+#mute-btn {
+  pointer-events: auto;
+  width: 48px;
+  height: 48px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  background: rgba(255, 247, 251, 0.88);
+  font-size: 22px;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(90, 45, 88, 0.18);
+}
+
+#touch {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0 max(16px, env(safe-area-inset-left)) calc(14px + env(safe-area-inset-bottom)) max(16px, env(safe-area-inset-right));
+  z-index: 3;
+  pointer-events: none;
+}
+
+#touch .move,
+#touch .actions { display: flex; gap: 14px; align-items: flex-end; pointer-events: auto; }
+
+#touch .wands {
+  position: relative;
+  width: 124px;
+  height: 128px;
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+#touch button {
+  width: 92px;
+  height: 92px;
+  border: 4px solid #fff;
+  border-radius: 50%;
+  background: rgba(255, 126, 179, 0.88);
+  color: #fff;
+  font-size: 30px;
+  font-weight: 700;
+  box-shadow: 0 10px 0 #c44d86, 0 16px 24px rgba(90, 45, 88, 0.25);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  line-height: 1;
+  touch-action: none;
+  -webkit-user-select: none;
+}
+
+#touch button span {
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+#touch button:active,
+#touch button.held {
+  transform: translateY(6px);
+  box-shadow: 0 4px 0 #c44d86, 0 8px 16px rgba(90, 45, 88, 0.25);
+}
+
+#touch .jump {
+  width: 118px;
+  height: 118px;
+  background: rgba(255, 215, 106, 0.94);
+  color: #7a4b00;
+  box-shadow: 0 10px 0 #e0a83a, 0 16px 24px rgba(90, 45, 88, 0.25);
+}
+
+#touch .duck {
+  background: rgba(168, 140, 255, 0.88);
+  box-shadow: 0 10px 0 #7b63c9, 0 16px 24px rgba(90, 45, 88, 0.25);
+}
+
+#touch button.wand {
+  position: absolute;
+  width: 92px;
+  height: 92px;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  gap: 0;
+  filter: drop-shadow(0 5px 0 rgba(90, 45, 88, 0.28)) drop-shadow(0 10px 12px rgba(90, 45, 88, 0.22));
+}
+
+#touch button.wand span { display: none; }
+
+#touch button.wand img {
+  width: 84px;
+  height: 84px;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+#touch button.gem-wand {
+  top: 0;
+  right: 0;
+}
+
+#touch button.star-wand {
+  left: 0;
+  bottom: 0;
+}
+
+#touch button.wand:active,
+#touch button.wand.held {
+  transform: translateY(5px);
+  box-shadow: none;
+  filter: drop-shadow(0 2px 0 rgba(90, 45, 88, 0.28)) drop-shadow(0 5px 8px rgba(90, 45, 88, 0.2));
+}
+
+.screen {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background:
+    linear-gradient(180deg, rgba(255, 182, 213, 0.18), rgba(74, 28, 92, 0.28));
+  z-index: 4;
+}
+
+.screen.hidden { display: none; }
+
+.card {
+  width: min(560px, 92vw);
+  text-align: center;
+  background: rgba(255, 247, 251, 0.94);
+  border: 4px solid #fff;
+  border-radius: 36px;
+  padding: 36px 28px 28px;
+  box-shadow: 0 24px 60px rgba(58, 16, 70, 0.28);
+}
+
+.eyebrow {
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  color: #c44d86;
+}
+
+h1, .script {
+  font-family: "Great Vibes", "Segoe Script", cursive;
+  font-size: clamp(56px, 10vw, 86px);
+  font-weight: 400;
+  color: #c44d86;
+  line-height: 1;
+  margin: 8px 0 12px;
+  text-shadow: 0 6px 0 rgba(255, 215, 106, 0.55);
+}
+
+.tagline, .story {
+  font-size: 20px;
+  line-height: 1.45;
+  margin: 0 auto 22px;
+  max-width: 26em;
+}
+
+.play {
+  appearance: none;
+  border: 0;
+  background: linear-gradient(180deg, #ff9ec8, #ff6fa8);
+  color: #fff;
+  font-family: inherit;
+  font-size: 32px;
+  font-weight: 700;
+  padding: 18px 52px;
+  min-height: 64px;
+  min-width: 200px;
+  border-radius: 999px;
+  cursor: pointer;
+  box-shadow: 0 8px 0 #d44e86;
+  touch-action: manipulation;
+}
+
+.play:active { transform: translateY(4px); box-shadow: 0 4px 0 #d44e86; }
+
+#rotate {
+  display: none;
+  position: absolute;
+  top: max(10px, env(safe-area-inset-top));
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 6;
+  background: rgba(255, 247, 251, 0.95);
+  border: 3px solid #fff;
+  border-radius: 999px;
+  padding: 10px 18px;
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--ink);
+  box-shadow: 0 8px 20px rgba(90, 45, 88, 0.18);
+  white-space: nowrap;
+}
+
+@media (orientation: portrait) and (max-width: 1100px) {
+  #rotate { display: block; }
+}
+
+@media (min-width: 700px) {
+  #touch button {
+    width: 104px;
+    height: 104px;
+    font-size: 34px;
+  }
+  #touch .jump {
+    width: 132px;
+    height: 132px;
+  }
+  #touch button span { font-size: 13px; }
+}
+
+.hint {
+  margin-top: 16px;
+  font-size: 14px;
+  color: #8a5a86;
+}
+
+.big-score {
+  font-size: 28px;
+  font-weight: 700;
+  color: #a14a16;
+  margin-bottom: 18px;
+}

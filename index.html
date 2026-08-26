@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Princess Nyla" />
+  <meta name="theme-color" content="#1b0b24" />
+  <title>Princess Nyla</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Great+Vibes&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css?v=wand92" />
+</head>
+<body>
+  <div id="app">
+    <canvas id="game"></canvas>
+
+    <div id="hud" hidden>
+      <div class="hud-left">
+        <img src="assets/star.png" alt="" />
+        <span id="star-count">0</span>
+      </div>
+      <div class="hud-gem empty" id="gem-hud">
+        <img src="assets/gem.png" alt="" />
+        <span id="gem-count">0</span>
+      </div>
+      <div class="hud-hearts" id="hearts">
+        <img src="assets/heart.png" class="hp" alt="" />
+        <img src="assets/heart.png" class="hp" alt="" />
+        <img src="assets/heart.png" class="hp" alt="" />
+      </div>
+      <div class="hud-center" id="level-name">Rose Garden</div>
+      <button id="mute-btn" type="button" aria-label="Mute">♪</button>
+    </div>
+
+    <div id="touch" hidden>
+      <div class="move">
+        <button type="button" data-dir="left" aria-label="Left">◀<span>Left</span></button>
+        <button type="button" data-dir="right" aria-label="Right">▶<span>Right</span></button>
+      </div>
+      <div class="actions">
+        <button type="button" class="duck" data-dir="duck" aria-label="Duck">↓<span>Duck</span></button>
+        <div class="wands">
+          <button type="button" class="wand gem-wand" data-dir="gem" aria-label="Gem wand">
+            <img src="assets/gem.png" alt="" />
+            <span>Gem</span>
+          </button>
+          <button type="button" class="wand star-wand" data-dir="star" aria-label="Star wand">
+            <img src="assets/star.png" alt="" />
+            <span>Star</span>
+          </button>
+        </div>
+        <button type="button" class="jump" data-dir="jump" aria-label="Jump">↑<span>Jump</span></button>
+      </div>
+    </div>
+
+    <div id="rotate">Turn the tablet sideways to play ✨</div>
+
+    <div id="overlay" class="screen">
+      <div class="card" id="title-card">
+        <p class="eyebrow">A Magical Rescue</p>
+        <h1>Princess Nyla</h1>
+        <p class="tagline">The prince is trapped — only you can save him.</p>
+        <button type="button" class="play" id="play-btn">Play</button>
+        <p class="hint">Star wand and Gem wand are separate · Ride islands · Double-jump · Grab ledges<br>Tablet: turn sideways and use the big buttons.</p>
+        <p class="hint" id="wifi-hint"></p>
+      </div>
+    </div>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>

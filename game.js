@@ -2436,8 +2436,14 @@
     });
   }
 
+  function stopStoryVid() {
+    const v = document.getElementById("story-vid");
+    if (v) v.pause();
+  }
+
   function beginGame() {
     if (mode !== "title") return;
+    stopStoryVid();
     if (audio && audio.state === "suspended") audio.resume();
     startMusic();
     overlay.innerHTML = `
@@ -2482,17 +2488,38 @@
   bindInput();
   resize();
 
+  function launchFromUrl() {
+    const params = new URLSearchParams(location.search);
+    const hash = (location.hash || "").replace(/^#\/?/, "");
+    let lvl = 0;
+    if (params.has("level")) {
+      lvl = parseInt(params.get("level"), 10);
+    } else {
+      const m = hash.match(/^play\/(\d+)$/);
+      if (m) lvl = parseInt(m[1], 10);
+    }
+    if (!Number.isFinite(lvl) || lvl < 0) lvl = 0;
+    lvl = Math.min(LEVELS.length - 1, lvl);
+    const go =
+      params.has("play") ||
+      params.has("level") ||
+      hash === "play" ||
+      /^play\/\d+$/.test(hash);
+    if (!go) return false;
+    stopStoryVid();
+    overlay.classList.add("hidden");
+    hud.hidden = false;
+    showTouch();
+    resetRun();
+    startLevel(lvl);
+    mode = "play";
+    return true;
+  }
+
   loadAssets()
     .then(() => {
       requestAnimationFrame(loop);
-      if (new URLSearchParams(location.search).has("play")) {
-        overlay.classList.add("hidden");
-        hud.hidden = false;
-        showTouch();
-        resetRun();
-        startLevel(0);
-        mode = "play";
-      }
+      launchFromUrl();
     })
     .catch((err) => {
       overlay.innerHTML = `<div class="card"><h1>Oh no</h1><p class="story">${err}</p></div>`;

@@ -366,6 +366,266 @@
       arena: { left: 4240, lockMax: 5560 },
       boss: { x: 5100, y: 500, title: "Prince Nightpaw", art: "bossPanther", artCast: "bossPantherCast", hp: 8 },
     },
+    {
+      name: "Ember Ridge",
+      bg: "storm",
+      platform: "cloud",
+      wash: "rgba(255, 96, 32, 0.28)",
+      width: 6795,
+      spawn: { x: 80, y: 80 },
+      platforms: [
+        { x: 0, y: 220, w: 420 },
+        { x: 595, y: 300, w: 155 },
+        { x: 920, y: 385, w: 155 },
+        { x: 1250, y: 300, w: 155 },
+        { x: 1585, y: 390, w: 220, still: true },
+        { x: 1980, y: 300, w: 155 },
+        { x: 2315, y: 210, w: 155 },
+        { x: 2645, y: 300, w: 155 },
+        { x: 2970, y: 390, w: 155 },
+        { x: 3305, y: 310, w: 220, still: true },
+        { x: 3700, y: 230, w: 155 },
+        { x: 4030, y: 340, w: 155 },
+        { x: 4365, y: 460, w: 155 },
+        { x: 4695, y: 600, w: 2100 },
+        { x: 4955, y: 440, w: 150 },
+        { x: 5375, y: 360, w: 150 },
+        { x: 5795, y: 450, w: 150 },
+      ],
+      stars: [
+        [631, 222], [956, 307], [1286, 222], [1621, 312],
+        [2016, 222], [2351, 132], [2681, 222], [3006, 312],
+        [3341, 232], [3736, 152], [4066, 262], [4401, 382],
+        [4731, 522],
+      ],
+      hearts: [[3375, 264]],
+      gems: [[1665, 340], [4405, 410]],
+      friends: [{ kind: "bunny", x: 1633, y: 390 }],
+      enemies: [
+        { kind: "bat", x: 672, y: 282, left: 611, right: 734, speed: 2.8 },
+        { kind: "goblin", x: 997, y: 385, left: 936, right: 1059, speed: 3.1 },
+        { kind: "puff", x: 1327, y: 282, left: 1266, right: 1389, speed: 2.9 },
+        { kind: "bramble", x: 2057, y: 300, left: 1996, right: 2119, speed: 3.3 },
+        { kind: "bat", x: 2392, y: 192, left: 2331, right: 2454, speed: 3.0 },
+        { kind: "puff", x: 2722, y: 282, left: 2661, right: 2784, speed: 3.4 },
+        { kind: "goblin", x: 3047, y: 390, left: 2986, right: 3109, speed: 2.75 },
+        { kind: "bat", x: 3777, y: 212, left: 3716, right: 3839, speed: 3.2 },
+        { kind: "goblin", x: 5075, y: 600, left: 4875, right: 5595, speed: 3.15 },
+      ],
+      crown: { x: 4455, y: 460 },
+      prince: { x: 6625, y: 600 },
+      rescue: "Lady Cinderwing",
+      arena: { left: 4695, lockMax: 6405 },
+      boss: { x: 5335, y: 520, title: "Lady Cinderwing", art: "bossCinder", artCast: "bossCinder", hp: 10, pattern: "fan", tough: true, glow: "fire" },
+    },
+    {
+      name: "Frost Hollow",
+      bg: "cave",
+      platform: "grass",
+      wash: "rgba(150, 206, 255, 0.34)",
+      width: 6870,
+      spawn: { x: 80, y: 60 },
+      platforms: [
+        { x: 0, y: 200, w: 420 },
+        { x: 600, y: 290, w: 150 },
+        { x: 935, y: 200, w: 150 },
+        { x: 1260, y: 310, w: 150 },
+        { x: 1595, y: 400, w: 220, still: true },
+        { x: 1995, y: 310, w: 150 },
+        { x: 2330, y: 220, w: 150 },
+        { x: 2660, y: 330, w: 150 },
+        { x: 2985, y: 430, w: 150 },
+        { x: 3320, y: 340, w: 220, still: true },
+        { x: 3720, y: 250, w: 150 },
+        { x: 4055, y: 360, w: 150 },
+        { x: 4385, y: 470, w: 150 },
+        { x: 4710, y: 600, w: 2160 },
+        { x: 4970, y: 440, w: 150 },
+        { x: 5390, y: 360, w: 150 },
+        { x: 5810, y: 450, w: 150 },
+      ],
+      stars: [
+        [636, 212], [971, 122], [1296, 232], [1631, 322],
+        [2031, 232], [2366, 142], [2696, 252], [3021, 352],
+        [3356, 262], [3756, 172], [4091, 282], [4421, 392],
+        [4746, 522],
+      ],
+      hearts: [[3390, 294]],
+      gems: [[1675, 350], [4425, 420]],
+      friends: [{ kind: "bunny", x: 1643, y: 400 }],
+      enemies: [
+        { kind: "bat", x: 675, y: 272, left: 616, right: 734, speed: 2.8 },
+        { kind: "goblin", x: 1010, y: 200, left: 951, right: 1069, speed: 3.1 },
+        { kind: "puff", x: 1335, y: 292, left: 1276, right: 1394, speed: 2.9 },
+        { kind: "bramble", x: 2070, y: 310, left: 2011, right: 2129, speed: 3.3 },
+        { kind: "bat", x: 2405, y: 202, left: 2346, right: 2464, speed: 3.0 },
+        { kind: "puff", x: 2735, y: 312, left: 2676, right: 2794, speed: 3.4 },
+        { kind: "goblin", x: 3060, y: 430, left: 3001, right: 3119, speed: 2.75 },
+        { kind: "bat", x: 3795, y: 232, left: 3736, right: 3854, speed: 3.2 },
+        { kind: "goblin", x: 5090, y: 600, left: 4890, right: 5610, speed: 3.15 },
+      ],
+      crown: { x: 4475, y: 470 },
+      prince: { x: 6700, y: 600 },
+      rescue: "Duke Shiverfang",
+      arena: { left: 4710, lockMax: 6480 },
+      boss: { x: 5350, y: 520, title: "Duke Shiverfang", art: "bossShiver", artCast: "bossShiver", hp: 11, pattern: "rain", tough: true, glow: "ice" },
+    },
+    {
+      name: "Tideglass Bay",
+      bg: "clouds",
+      platform: "cloud",
+      wash: "rgba(32, 176, 168, 0.28)",
+      width: 6980,
+      spawn: { x: 80, y: 110 },
+      platforms: [
+        { x: 0, y: 250, w: 420 },
+        { x: 605, y: 340, w: 150 },
+        { x: 945, y: 250, w: 150 },
+        { x: 1280, y: 360, w: 150 },
+        { x: 1620, y: 270, w: 220, still: true },
+        { x: 2025, y: 370, w: 150 },
+        { x: 2365, y: 280, w: 150 },
+        { x: 2700, y: 390, w: 150 },
+        { x: 3030, y: 300, w: 150 },
+        { x: 3370, y: 410, w: 220, still: true },
+        { x: 3775, y: 320, w: 150 },
+        { x: 4115, y: 430, w: 150 },
+        { x: 4450, y: 500, w: 150 },
+        { x: 4780, y: 600, w: 2200 },
+        { x: 5040, y: 440, w: 150 },
+        { x: 5460, y: 360, w: 150 },
+        { x: 5880, y: 450, w: 150 },
+      ],
+      stars: [
+        [641, 262], [981, 172], [1316, 282], [1656, 192],
+        [2061, 292], [2401, 202], [2736, 312], [3066, 222],
+        [3406, 332], [3811, 242], [4151, 352], [4486, 422],
+        [4816, 522],
+      ],
+      hearts: [[3440, 364]],
+      gems: [[1700, 220], [4490, 450]],
+      friends: [{ kind: "bunny", x: 1668, y: 270 }],
+      enemies: [
+        { kind: "bat", x: 680, y: 322, left: 621, right: 739, speed: 2.8 },
+        { kind: "goblin", x: 1020, y: 250, left: 961, right: 1079, speed: 3.1 },
+        { kind: "puff", x: 1355, y: 342, left: 1296, right: 1414, speed: 2.9 },
+        { kind: "bramble", x: 2100, y: 370, left: 2041, right: 2159, speed: 3.3 },
+        { kind: "bat", x: 2440, y: 262, left: 2381, right: 2499, speed: 3.0 },
+        { kind: "puff", x: 2775, y: 372, left: 2716, right: 2834, speed: 3.4 },
+        { kind: "goblin", x: 3105, y: 300, left: 3046, right: 3164, speed: 2.75 },
+        { kind: "bat", x: 3850, y: 302, left: 3791, right: 3909, speed: 3.2 },
+        { kind: "goblin", x: 5160, y: 600, left: 4960, right: 5680, speed: 3.15 },
+      ],
+      crown: { x: 4540, y: 500 },
+      prince: { x: 6810, y: 600 },
+      rescue: "Captain Kelp",
+      arena: { left: 4780, lockMax: 6590 },
+      boss: { x: 5420, y: 520, title: "Captain Kelp", art: "bossKelp", artCast: "bossKelp", hp: 12, pattern: "dash", tough: true, glow: "tide" },
+    },
+    {
+      name: "Moon Orchard",
+      bg: "forest",
+      platform: "grass",
+      wash: "rgba(128, 72, 196, 0.30)",
+      width: 6970,
+      spawn: { x: 80, y: 70 },
+      platforms: [
+        { x: 0, y: 210, w: 420 },
+        { x: 600, y: 300, w: 150 },
+        { x: 935, y: 210, w: 150 },
+        { x: 1265, y: 320, w: 150 },
+        { x: 1600, y: 410, w: 220, still: true },
+        { x: 2000, y: 320, w: 150 },
+        { x: 2335, y: 230, w: 150 },
+        { x: 2665, y: 340, w: 150 },
+        { x: 3000, y: 450, w: 150 },
+        { x: 3330, y: 365, w: 220, still: true },
+        { x: 3735, y: 285, w: 150 },
+        { x: 4065, y: 370, w: 150 },
+        { x: 4400, y: 490, w: 150 },
+        { x: 4730, y: 600, w: 2240 },
+        { x: 4990, y: 440, w: 150 },
+        { x: 5410, y: 360, w: 150 },
+        { x: 5830, y: 450, w: 150 },
+      ],
+      stars: [
+        [636, 222], [971, 132], [1301, 242], [1636, 332],
+        [2036, 242], [2371, 152], [2701, 262], [3036, 372],
+        [3366, 287], [3771, 207], [4101, 292], [4436, 412],
+        [4766, 522],
+      ],
+      hearts: [[3400, 319]],
+      gems: [[1680, 360], [4440, 440]],
+      friends: [{ kind: "bunny", x: 1648, y: 410 }],
+      enemies: [
+        { kind: "bat", x: 675, y: 282, left: 616, right: 734, speed: 2.8 },
+        { kind: "goblin", x: 1010, y: 210, left: 951, right: 1069, speed: 3.1 },
+        { kind: "puff", x: 1340, y: 302, left: 1281, right: 1399, speed: 2.9 },
+        { kind: "bramble", x: 2075, y: 320, left: 2016, right: 2134, speed: 3.3 },
+        { kind: "bat", x: 2410, y: 212, left: 2351, right: 2469, speed: 3.0 },
+        { kind: "puff", x: 2740, y: 322, left: 2681, right: 2799, speed: 3.4 },
+        { kind: "goblin", x: 3075, y: 450, left: 3016, right: 3134, speed: 2.75 },
+        { kind: "bat", x: 3810, y: 267, left: 3751, right: 3869, speed: 3.2 },
+        { kind: "goblin", x: 5110, y: 600, left: 4910, right: 5630, speed: 3.15 },
+      ],
+      crown: { x: 4490, y: 490 },
+      prince: { x: 6800, y: 600 },
+      rescue: "Madame Moth",
+      arena: { left: 4730, lockMax: 6580 },
+      boss: { x: 5370, y: 520, title: "Madame Moth", art: "bossMoth", artCast: "bossMoth", hp: 13, pattern: "fan", tough: true, glow: "moth" },
+    },
+    {
+      name: "Crownfall",
+      bg: "palace",
+      platform: "cloud",
+      wash: "rgba(255, 196, 70, 0.24)",
+      width: 7073,
+      spawn: { x: 80, y: 60 },
+      platforms: [
+        { x: 0, y: 200, w: 420 },
+        { x: 608, y: 290, w: 148 },
+        { x: 946, y: 200, w: 148 },
+        { x: 1282, y: 295, w: 148 },
+        { x: 1620, y: 390, w: 210, still: true },
+        { x: 2018, y: 300, w: 148 },
+        { x: 2356, y: 210, w: 148 },
+        { x: 2692, y: 305, w: 148 },
+        { x: 3030, y: 400, w: 148 },
+        { x: 3366, y: 310, w: 210, still: true },
+        { x: 3766, y: 230, w: 148 },
+        { x: 4102, y: 340, w: 148 },
+        { x: 4440, y: 470, w: 148 },
+        { x: 4773, y: 600, w: 2300 },
+        { x: 5033, y: 440, w: 150 },
+        { x: 5453, y: 360, w: 150 },
+        { x: 5873, y: 450, w: 150 },
+      ],
+      stars: [
+        [644, 212], [982, 122], [1318, 217], [1656, 312],
+        [2054, 222], [2392, 132], [2728, 227], [3066, 322],
+        [3402, 232], [3802, 152], [4138, 262], [4476, 392],
+        [4809, 522],
+      ],
+      hearts: [[3436, 264]],
+      gems: [[1700, 340], [4480, 420]],
+      friends: [{ kind: "bunny", x: 1668, y: 390 }],
+      enemies: [
+        { kind: "bat", x: 682, y: 272, left: 624, right: 740, speed: 2.8 },
+        { kind: "goblin", x: 1020, y: 200, left: 962, right: 1078, speed: 3.1 },
+        { kind: "puff", x: 1356, y: 277, left: 1298, right: 1414, speed: 2.9 },
+        { kind: "bramble", x: 2092, y: 300, left: 2034, right: 2150, speed: 3.3 },
+        { kind: "bat", x: 2430, y: 192, left: 2372, right: 2488, speed: 3.0 },
+        { kind: "puff", x: 2766, y: 287, left: 2708, right: 2824, speed: 3.4 },
+        { kind: "goblin", x: 3104, y: 400, left: 3046, right: 3162, speed: 2.75 },
+        { kind: "bat", x: 3840, y: 212, left: 3782, right: 3898, speed: 3.2 },
+        { kind: "goblin", x: 5153, y: 600, left: 4953, right: 5673, speed: 3.15 },
+      ],
+      crown: { x: 4530, y: 470 },
+      prince: { x: 6903, y: 600 },
+      rescue: "the Glass King",
+      arena: { left: 4773, lockMax: 6683 },
+      boss: { x: 5413, y: 520, title: "The Glass King", art: "bossGlass", artCast: "bossGlass", hp: 14, pattern: "king", tough: true, glow: "glass" },
+    },
   ];
 
   function loadImage(src) {
@@ -416,6 +676,11 @@
       bossStormCast: "assets/boss-storm-cast.png",
       bossPanther: "assets/boss-panther.png",
       bossPantherCast: "assets/boss-panther-cast.png",
+      bossCinder: "assets/boss-cinder.png",
+      bossShiver: "assets/boss-shiver.png",
+      bossKelp: "assets/boss-kelp.png",
+      bossMoth: "assets/boss-moth.png",
+      bossGlass: "assets/boss-glass.png",
     };
     await Promise.all(
       Object.entries(files).map(async ([k, src]) => {
@@ -602,7 +867,10 @@
         maxHp: src.boss.hp || 6,
         title: src.boss.title || "Boss",
         art: src.boss.art || "boss",
-        artCast: src.boss.artCast || "bossCast",
+        artCast: src.boss.artCast || src.boss.art || "bossCast",
+        pattern: src.boss.pattern || "fan",
+        tough: !!src.boss.tough,
+        glow: src.boss.glow || "",
         state: "intro",
         timer: 0,
         invuln: 0,
@@ -629,6 +897,17 @@
         if (i % 2 === 0) rangeX = (52 + (i % 4) * 16) * rangeMul;
         else rangeY = (38 + (i % 4) * 12) * rangeMul;
         ms = (0.78 + (i % 5) * 0.16) * speedMul;
+      }
+      if (p.still) {
+        rangeX = 0;
+        rangeY = 0;
+        ms = 0;
+      } else if (levelI >= 7 && !stay) {
+        // The shared curve would fling these islands out of reach. Cap it.
+        const step = levelI - 7;
+        rangeX = Math.min(rangeX, 100 + step * 8);
+        rangeY = Math.min(rangeY, 60 + step * 6);
+        ms = Math.min(ms, 2.35 + step * 0.08);
       }
       return {
         ...p,
@@ -782,12 +1061,12 @@
     bossShots = [];
     camX = Math.max(0, player.x - 380);
     safe = { x: s.x, y: s.y };
-    toast = level.name;
+    toast = i >= 7 ? level.name + ". Two hearts." : level.name;
     toastT = 1.8;
-    levelNameEl.textContent = level.name;
+    levelNameEl.textContent = level.name + "  " + (i + 1) + "/" + LEVELS.length;
     awaitingAdvance = false;
     retrying = false;
-    hearts = MAX_HEARTS;
+    hearts = i >= 7 ? 2 : MAX_HEARTS;
     renderHearts();
   }
 
@@ -1125,6 +1404,11 @@
     if (player.onGround) {
       player.airJumps = 1;
       player.grab = null;
+      const plat = player.standPlat;
+      if (levelIndex >= 7 && plat && (plat.w >= 380 || plat.still) && player.y < H) {
+        safe.x = player.x;
+        safe.y = player.y;
+      }
     } else {
       tryGrab();
     }
@@ -1659,7 +1943,7 @@
     const b = level.boss;
     if (!b || !b.alive || b.invuln > 0) return;
     b.hp -= 1;
-    b.invuln = 0.75;
+    b.invuln = b.tough ? 0.45 : 0.75;
     b.state = "hurt";
     b.timer = 0;
     b.shot = false;
@@ -1676,26 +1960,52 @@
       burst(b.x, b.y - 80, "#ffd76a", 36);
       if (audio) sfxCrown();
     } else {
-      toast = b.hp <= 3 ? "She's getting mad!" : "Nice hit, Nyla!";
+      const mad = b.hp <= Math.max(3, Math.ceil(b.maxHp * 0.34));
+      toast = mad ? b.title + " is getting mad!" : "Nice hit, Nyla!";
       toastT = 1.3;
     }
   }
 
   function fireBossOrbs(b) {
+    const pattern = b.pattern || "fan";
     const pcx = player.x + PW / 2;
     const pcy = player.y + PH * 0.4;
     const ox = b.x + b.dir * 50;
     const oy = b.y - 120;
     const base = Math.atan2(pcy - oy, pcx - ox);
-    const spd = b.hp <= Math.ceil(b.maxHp / 2) ? 6.4 : 5.2;
-    [-0.32, 0, 0.32].forEach((off) => {
+    const angry = b.hp <= Math.ceil(b.maxHp / 2);
+    let spd = angry ? (b.tough ? 7.2 : 6.4) : (b.tough ? 6.0 : 5.2);
+    if (pattern === "rain") {
+      const drops = angry ? [-150, -70, 0, 70, 150] : [-90, 0, 90];
+      drops.forEach((dx) => {
+        bossShots.push({
+          x: pcx + dx,
+          y: Math.max(24, pcy - 300),
+          vx: dx * 0.004,
+          vy: spd * 0.82,
+          life: 3.2,
+        });
+      });
+      sfxBossCast();
+      return;
+    }
+    let offsets = [-0.32, 0, 0.32];
+    if (pattern === "king") {
+      offsets = angry
+        ? [-0.52, -0.34, -0.16, 0, 0.16, 0.34, 0.52]
+        : [-0.46, -0.23, 0, 0.23, 0.46];
+    } else if (pattern === "dash") {
+      offsets = [-0.08, 0, 0.08];
+      spd *= 1.28;
+    }
+    offsets.forEach((off) => {
       const a = base + off;
       bossShots.push({
         x: ox,
         y: oy,
         vx: Math.cos(a) * spd,
         vy: Math.sin(a) * spd,
-        life: 2.4,
+        life: pattern === "dash" ? 1.7 : 2.4,
       });
     });
     sfxBossCast();
@@ -1719,8 +2029,6 @@
     if (b.state === "intro") {
       b.y = b.homeY - 30 + Math.sin(time * 2) * 12;
       if (level.arena && player.x > level.arena.left) {
-        toast = b.title + "!";
-        toastT = 2;
         b.state = "idle";
         b.timer = 0;
       }
@@ -1736,8 +2044,12 @@
       const al = level.arena ? level.arena.left + 100 : 400;
       const ar = level.arena ? level.arena.lockMax + 120 : level.width - 80;
       b.x = Math.max(al, Math.min(ar, b.x));
-      if (b.timer > (angry ? 1.05 : 1.55)) {
-        b.state = Math.random() < 0.58 ? "cast" : "swoop";
+      const wait = b.tough ? (angry ? 0.68 : 0.95) : (angry ? 1.05 : 1.55);
+      let castBias = 0.58;
+      if (b.pattern === "dash") castBias = 0.34;
+      else if (b.pattern === "rain" || b.pattern === "king") castBias = 0.74;
+      if (b.timer > wait) {
+        b.state = Math.random() < castBias ? "cast" : "swoop";
         b.timer = 0;
         b.shot = false;
       }
@@ -1752,7 +2064,8 @@
       if (b.timer < 0.22) {
         b.y -= 1.4;
       } else {
-        b.x += b.dir * (angry ? 8.5 : 6.8);
+        const swoop = (b.tough ? (angry ? 10.2 : 8.2) : (angry ? 8.5 : 6.8)) + (b.pattern === "dash" ? 1.6 : 0);
+        b.x += b.dir * swoop;
         b.y += 3.2;
       }
       if (b.timer > 0.85) {
@@ -2067,6 +2380,10 @@
     const sx = -(parallax % dw);
     ctx.drawImage(img, sx, 0, dw, H);
     ctx.drawImage(img, sx + dw - 1, 0, dw, H);
+    if (level && level.wash) {
+      ctx.fillStyle = level.wash;
+      ctx.fillRect(0, 0, W, H);
+    }
   }
 
   function drawPlatforms() {
@@ -2148,10 +2465,23 @@
     const b = level.boss;
     if (!b || !b.alive) return;
     const img = (b.state === "cast" ? assets[b.artCast] : assets[b.art]) || assets.boss;
-    if (b.invuln > 0 && Math.floor(time * 16) % 2 === 0) ctx.globalAlpha = 0.4;
+    const glow = {
+      fire: "255,110,40",
+      ice: "150,210,255",
+      tide: "40,190,180",
+      moth: "180,90,220",
+      glass: "255,210,90",
+    };
     ctx.save();
     ctx.translate(b.x, b.y);
+    if (b.glow && (b.state === "cast" || b.state === "swoop")) {
+      ctx.fillStyle = "rgba(" + (glow[b.glow] || "200,140,255") + ",0.38)";
+      ctx.beginPath();
+      ctx.ellipse(0, -b.visH * 0.46, b.visW * 0.58, b.visH * 0.5, 0, 0, Math.PI * 2);
+      ctx.fill();
+    }
     ctx.scale(-b.dir, 1);
+    if (b.invuln > 0 && Math.floor(time * 16) % 2 === 0) ctx.globalAlpha = 0.4;
     ctx.drawImage(img, -b.visW / 2, -b.visH, b.visW, b.visH);
     ctx.restore();
     ctx.globalAlpha = 1;
@@ -2171,9 +2501,9 @@
   function drawBossBar() {
     const b = level.boss;
     if (!b || !b.alive || b.state === "intro") return;
-    const x = 310;
-    const y = 64;
-    const w = 660;
+    const w = 560;
+    const x = (W - w) / 2;
+    const y = 96;
     const h = 22;
     ctx.save();
     ctx.fillStyle = "rgba(255,247,251,0.92)";
@@ -2186,7 +2516,8 @@
     ctx.fillStyle = "#e8d4ef";
     roundRect(x, y, w, h, 10);
     ctx.fill();
-    ctx.fillStyle = "#b44ad0";
+    const barColors = { fire: "#e25a2a", ice: "#6eb6f0", tide: "#1aa398", moth: "#b44ad0", glass: "#e2b23a" };
+    ctx.fillStyle = barColors[b.glow] || "#b44ad0";
     const fw = Math.max(0, (b.hp / b.maxHp) * w);
     if (fw > 0) {
       roundRect(x, y, fw, h, 10);
@@ -2273,10 +2604,12 @@
     ctx.textAlign = "center";
     ctx.fillStyle = "rgba(255,247,251,0.92)";
     const tw = ctx.measureText(toast).width;
-    roundRect(W / 2 - tw / 2 - 22, 86, tw + 44, 50, 24);
+    const bossUp = level && level.boss && level.boss.alive && level.boss.state !== "intro";
+    const ty = bossUp ? 156 : 86;
+    roundRect(W / 2 - tw / 2 - 22, ty, tw + 44, 50, 24);
     ctx.fill();
     ctx.fillStyle = "#5a2d58";
-    ctx.fillText(toast, W / 2, 120);
+    ctx.fillText(toast, W / 2, ty + 34);
     ctx.restore();
   }
 
